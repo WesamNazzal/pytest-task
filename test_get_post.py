@@ -15,7 +15,8 @@ mock_post = {
 
 mock_posts_list = [
     {
-        'userId': 1, 'id': 1,
+        'userId': 1,
+        'id': 1,
         'title': 'First Post',
         'body': 'First post body.'},
     {
