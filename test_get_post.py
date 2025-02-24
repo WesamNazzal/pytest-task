@@ -1,12 +1,28 @@
-import pytest
 from unittest.mock import patch
-from requests.exceptions import HTTPError
-from get_post import get_post_by_id, get_posts_by_user_id, get_post_by_id_with_validation
 
-mock_post = {'userId': 1, 'id': 1, 'title': 'Test Post', 'body': 'Test post body.'}
+import pytest
+from requests.exceptions import HTTPError
+
+from get_post import (get_post_by_id, get_post_by_id_with_validation,
+                      get_posts_by_user_id)
+
+mock_post = {
+    'userId': 1,
+    'id': 1,
+    'title': 'Test Post',
+    'body': 'Test post body.',
+}
+
 mock_posts_list = [
-    {'userId': 1, 'id': 1, 'title': 'First Post', 'body': 'First post body.'},
-    {'userId': 1, 'id': 2, 'title': 'Second Post', 'body': 'Second post body.'},
+    {
+        'userId': 1, 'id': 1,
+        'title': 'First Post',
+        'body': 'First post body.'},
+    {
+        'userId': 1,
+        'id': 2, 'title': 'Second Post',
+        'body': 'Second post body.'
+    },
 ]
 
 
